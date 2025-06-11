@@ -129,7 +129,7 @@ export const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     //outline: 1px solid red;
-    color: ${theme.colors.accentYellow};
+    color: ${theme.colors.fontWhite};
 
     & + & {
         top: 50%;
@@ -150,7 +150,7 @@ export const ListItem = styled.li`
         display: inline-block;
         position: absolute;
         height: 3px;
-        background: ${theme.colors.accentYellow};
+        background: ${theme.colors.fontWhite};
         top: 50%;
         left: -10px;
         right: -10px;

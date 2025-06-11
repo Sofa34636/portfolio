@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
       background-color: ${theme.colors.primary};
       color: ${theme.colors.fontBlack};
       
+      min-width: 400px;
   }
   
 
@@ -40,6 +41,10 @@ export const GlobalStyle = createGlobalStyle`
 
   section{
       padding: 100px 0;
+      
+      @media ${theme.media.mobile} {
+      padding: 80px 0;
+      }
   }
   button {
     background-color: unset;

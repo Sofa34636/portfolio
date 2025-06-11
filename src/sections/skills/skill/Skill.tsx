@@ -5,7 +5,7 @@ import {Subtitle, Text} from "../../../components/Text";
 import {theme} from "../../../styles/Theme";
 
 type SkillPropsType = {
-    iconId: string,
+    imgIcon: string,
     title: string,
     text: string,
 }
@@ -13,7 +13,7 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkills>
-            <Icon iconId={props.iconId} viewBox={"0 0 74 74"} width={'74'} height={'74'}/>
+            <img src={props.imgIcon} alt="skill" />
             <Subtitle>{props.title}</Subtitle>
             <Text>{props.text}</Text>
         </StyledSkills>
@@ -27,8 +27,16 @@ const StyledSkills = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border: 1px solid black;
+
     ${Subtitle}{
-        padding: 25px 0 15px 0;
+        padding: 25px 0 5px 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid black;
+        
+    }
+    ${Text}{
+      
     }
 `
 

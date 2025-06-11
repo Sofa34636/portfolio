@@ -7,6 +7,7 @@ import {Testimony} from "./sections/testimony/Testimony";
 import {Footer} from "./layout/footer/Footer";
 import {Languages} from "./sections/languages/Languages";
 import {Training} from "./sections/training/Training";
+import {Contacts} from "./sections/contact/Contact";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Skills/>
             <Works/>
             <Testimony/>
+            <Contacts/>
             <Footer/>
         </div>
     );

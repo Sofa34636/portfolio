@@ -15,42 +15,59 @@ type WorkPropsType = {
 export const Work = (props: WorkPropsType) => {
     return (
         <StyledWork>
-            <ImgesWrapper>
+            <ImgWrapper>
 
-                <Imges src={props.src} alt=""/>
+                <Img src={props.src} alt=""/>
                 <Button>
-                    ve
+                    Открыть сайт
                 </Button>
-            </ImgesWrapper>
+            </ImgWrapper>
             {/*<Text>{props.languages}</Text>*/}
             <Description>
                 <Subtitle size={"25px"}>{props.name}</Subtitle>
                 <Text>{props.text}</Text>
                 <FlexWrapper gap={"20px"}>
-                    <LinkButton href='#'>Live</LinkButton>
-                    <LinkButton href='#'>Cached</LinkButton>
+                    <LinkButton href='#'>gitHab</LinkButton>
+                    <LinkButton href='#'>Сайт</LinkButton>
                 </FlexWrapper>
             </Description>
         </StyledWork>
     );
 };
 
-const ImgesWrapper = styled.div`
+const ImgWrapper = styled.div`
     position: relative;
 
+    ${Button} {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &:before {
+        transition: 1s;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2px);
+        opacity: 0;
+
+        position: absolute;
+    }
+
     &:hover {
-
         &:before {
-            transition: 5s;
-            content: '';
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(4px);
-
-            position: absolute;
+            opacity: 1;
         }
 
         ${Button} {
@@ -59,28 +76,33 @@ const ImgesWrapper = styled.div`
         }
     }
 
-    ${Button} {
-        opacity: 0;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-`
-//ставим стили элементу, который уже отдельно прописан
-const Imges = styled.img`
+    @media ${theme.media.tablet} {
 
-    max-width: 330px;
+        &:before {
+            opacity: 1;
+        }
+
+        ${Button} {
+            opacity: 1;
+        }
+    }
+    
+
+`
+const Img = styled.img`
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    object-fit: cover;  //содержимое заполняет контейнер, при этом сохраняя пропорции.
 `
 const StyledWork = styled.div`
-    max-width: 330px;
-    width: 100%;
+    width: 330px;
+    max-width: 550px;
+    flex-grow: 1;
     background-color: ${theme.colors.fontWhite};
     border: 1px solid #000;
-    margin-bottom: 50px;
+    
+    @media ${theme.media.desktop} {
+    max-width: 330px;
+    }
 `
 const Description = styled.div`
     padding: 30px 20px;

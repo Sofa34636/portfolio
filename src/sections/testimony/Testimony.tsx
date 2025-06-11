@@ -17,7 +17,6 @@ export const Testimony = () => {
                 <BlockText text={"Отзывы"}></BlockText>
                 <FlexWrapper direction={"column"} align={"center"}>
                     <IconWrapper>
-
                     <Icon iconId={"commas"} width={"50"} height={"50"} viewBox={"0 0 50 50"}/>
                     </IconWrapper>
                     <Slider/>

@@ -24,30 +24,30 @@ export const Slider = () => {
 };
 
 const StyledSlider = styled.div`
-    width: 500px;
-    margin: 0 auto;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
 `
 const Slide = styled.div`
-
+    text-align: center;
 `
 const Pagination = styled.div`
-    span{
-       display: inline-block;
+    span {
+        display: inline-block;
         width: 7px;
         height: 7px;
         background-color: ${theme.colors.accentYellow};
         border-radius: 20px;
-        
-        &+span{
+
+        & + span {
             margin-left: 5px;
         }
-        &.active{
+
+        &.active {
             background-color: ${theme.colors.accentViolet};
             width: 20px;
         }
-        
+
     }
 `

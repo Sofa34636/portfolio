@@ -51,7 +51,7 @@ export const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     //outline: 1px solid red;
-    color: ${theme.colors.accentYellow};
+    color: ${theme.colors.fontWhite};
 
     & + & {
         top: 50%;

@@ -18,15 +18,12 @@ export const BlockText = (props: BlockTextType) => {
     );
 };
 
-const StyledIcon = styled(Icon)`
-   
-    
-`;
+
 
 
 const StrokeText = styled.div`
     background: ${theme.colors.accentYellow};
-    max-width: 700px;
+    width: 60%;
     display: flex;
     align-items: center;
     z-index: 10;
@@ -35,18 +32,25 @@ const StrokeText = styled.div`
 
     position: relative;
     overflow: hidden;
+    
+    @media ${theme.media.mobile} {
+        margin-bottom: 25px;
+        
+    }
 `
 
 const Title = styled.h2`
     padding: 5px 20px 5px 0;
     font-weight: 500;
     line-height: 124%;
-    font-size: 32px;
     color: ${theme.colors.fontWhite};
     background: ${theme.colors.accentYellow};
     display: inline-block;
     position: relative;
     
+
+    font-size: calc((100vw - 360px) / (1400 - 360) * (32 - 28) + 28px);
+
 
 
     &::before {

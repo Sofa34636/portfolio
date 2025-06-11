@@ -16,7 +16,7 @@ export const Works = () => {
             <Container>
                 <BlockText text={"Проекты"}></BlockText>
                 <TabMenu menuItems={items}/>
-                <FlexWrapper gap={"30px"} wrap={"wrap"} align={"flex-start"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-around"} gap={"30px"}>
                     <Work src={proj1} languages={"HTML SCSS Python Flask"} name={"ChertNodes"}
                           text={"Minecraft servers hosting"}/>
                     <Work src={proj1} languages={"HTML SCSS Python Flask"} name={"ChertNodes"}

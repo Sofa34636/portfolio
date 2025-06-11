@@ -2,30 +2,35 @@ import React from 'react';
 import {BlockText} from "../../components/BlockText";
 import styled from "styled-components";
 import {Container} from "../../components/Container";
-import {SkillBox} from "./skillBox/SkillBox";
-import {FlexWrapper} from "../../components/FlexWrapper";
-import {theme} from "../../styles/Theme";
-import {Icon} from "../../components/icon";
+import {GridWrapper} from "../../components/GridWrapper";
+import skill1 from "../../assets/images/skillImg/skill1.png";
+import skill2 from "../../assets/images/skillImg/skill2.png";
+import skill3 from "../../assets/images/skillImg/skill3.png";
+import skill4 from "../../assets/images/skillImg/skill4.png";
+import skill5 from "../../assets/images/skillImg/skill5.png";
+import skill6 from "../../assets/images/skillImg/skill6.png";
+import skill7 from "../../assets/images/skillImg/skill7.png";
+import skill8 from "../../assets/images/skillImg/skill8.png";
+import skill9 from "../../assets/images/skillImg/skill9.png";
+import skill10 from "../../assets/images/skillImg/skill10.png";
 
 export const Languages = () => {
     return (
         <LanguagesSection>
             <Container>
                 <BlockText text={"Навыки"}></BlockText>
-                <FlexWrapper justify="space-between">
-                    <WrapImg>
-                        <Icon iconId={"figure1"} width="86" height="86" viewBox="0 0 86 86"></Icon>
-                        <Icon iconId={"figure2"} width="63" height="63" viewBox="0 0 63 63"></Icon>
-                        <Icon iconId={"figure3"} width="114" height="114" viewBox="0 0 114 114"></Icon>
-                    </WrapImg>
-                    <FlexWrapper gap={"20px"} align={"flex-start"} wrap={"wrap"}>
-                        <SkillBox title={"Languages"} text={"TypeScript JavaScript"}/>
-                        <SkillBox title={"Tools"} text={"VSCode Figma Git Insomnia"}/>
-                        <SkillBox title={"Frameworks"} text={"React Next.js"}/>
-                        <SkillBox title={"Frontend"} text={"GSAP Three.js Web Components"}/>
-                        <SkillBox title={"Other"} text={"HTML CSS SCSS REST   Prettier Styled components"}/>
-                    </FlexWrapper>
-                </FlexWrapper>
+                <GridSkills>
+                    <img alt={"skill"} src={skill1} />
+                    <img alt={"skill"} src={skill2} />
+                    <img alt={"skill"} src={skill3} />
+                    <img alt={"skill"} src={skill4} />
+                    <img alt={"skill"} src={skill5} />
+                    <img alt={"skill"} src={skill6} />
+                    <img alt={"skill"} src={skill7} />
+                    <img alt={"skill"} src={skill8} />
+                    <img alt={"skill"} src={skill9} />
+                    <img alt={"skill"} src={skill10} />
+                </GridSkills>
             </Container>
         </LanguagesSection>
     );
@@ -34,11 +39,13 @@ export const Languages = () => {
 const LanguagesSection = styled.section`
 
 `
-const WrapImg = styled.div`
-    display: flex;
-    gap: 20px;
+const GridSkills = styled.section`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-auto-rows: auto;
+    gap: 50px;
+    
+    align-items: center;
+    justify-items: center;
 `
 
-const Deskription = styled.div`
-
-`
